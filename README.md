@@ -24,6 +24,7 @@ You will be redirected to the browser to verify your credentials.
 To link your local app with ionic hub, first create a new app in Ionic Hub and **write down the App Id**.
 
 Then to fire up a fresh Ionic app with Capacitor and React support simply run this terminal command from within your myApp directory, substituting YOUR_APPID with your App Id you wrote down before:
+
 `ionic start myApp tabs --capacitor --type react --id YOUR_APPID`
 
 In order for ionic to link to your Github repository, you need to follow the instructions from the Terminal, and authorize Ionic to access your github repositories. 
@@ -48,15 +49,19 @@ We're gonna use the `cordova-res` package to handle the packaging, resizing and 
 `npm install cordova-res --save-dev`
 
 cordova-res expects a project structure such as:
-> resources/
-├─ icon.png (at least 1024×1024px)
-└─ splash.png (at least 2732×2732px)
+```
+resources/
+  ├─ icon.png (at least 1024×1024px)
+  └─ splash.png (at least 2732×2732px)
+```
 
 To use cordova-res with Capacitor, it is recommended to use --skip-config (which skips reading & writing to Cordova's config.xml file) and --copy (copies generated resources into native projects).
 
 So to generate icons and splash screens for iOS and Android in Capacitor, run:
-`cordova-res ios --skip-config --copy`
-`cordova-res android --skip-config --copy`
+```bash
+cordova-res ios --skip-config --copy
+cordova-res android --skip-config --copy
+```
 
 ### Adding Live Deploy
 To link up the Appflow Live Deploy service, you first need to build the web assets. So run this command:
@@ -85,9 +90,11 @@ And then you need to make sure that the app, that you have now packaged (ionic b
 
 Let's first get a build up on Ionic Hub. For that, we use Github. 
 
-`git add . `
-`git commit -m "first commit"`
-`git push origin master`
+```bash
+git add . 
+git commit -m "first commit"
+git push origin master
+```
 
 Then in Ionic Hub select the commit and pick "Create Build" and select "Web" as Target Platform. This will cause a cloud build/web build of your committed code. 
 
