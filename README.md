@@ -39,10 +39,21 @@ To just see that it's working run ionic serve and check out the tabs in the brow
 ### Adding iOS and Android support
 
 To add support for iOS and Android you simply run:
+
 `ionic capacitor add ios`
 
 and for Android:
+
 `ionic capacitor add android`
+
+⚠️ In order for Capacitor to actually get your Ionic app to load inside the native Android webview you also need to add the following attribute to the `<application>`-tag in the `AndroidManifest.xml`:
+
+```xml
+<application
+    android:usesCleartextTraffic="true"
+    ...
+</application>
+```
 
 ### Adding app icons and splash screens
 We're gonna use the `cordova-res` package to handle the packaging, resizing and saving of our app icon and splash screen into the many different sizes and formats that both iOS and Android needs:
