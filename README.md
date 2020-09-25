@@ -63,10 +63,13 @@ cordova-res expects a project structure such as:
 ```
 resources/
   ├─ icon.png (at least 1024×1024px)
-  └─ splash.png (at least 2732×2732px)
+  ├─ splash.png (at least 2732×2732px)
+  └─ android/
+      ├─ icon-foreground.png (at least 432×432px)
+      └─ icon-background.png (at least 432×432px)  
 ```
 
-To use cordova-res with Capacitor, it is recommended to use --skip-config (which skips reading & writing to Cordova's config.xml file) and --copy (copies generated resources into native projects).
+To use cordova-res with Capacitor, it is recommended to use --skip-config (which skips reading & writing to Cordova's config.xml file) and --copy (copies generated resources into native projects). For more information about using cordova-res with Android adaptive icons see [this issue on github](https://github.com/ionic-team/cordova-res/issues/108).
 
 So to generate icons and splash screens for iOS and Android in Capacitor, run:
 ```bash
