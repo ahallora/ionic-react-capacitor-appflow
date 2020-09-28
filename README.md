@@ -124,7 +124,7 @@ Also, you need to add additional parameters to the info.plist (for IOS):
 <string>https://api.ionicjs.com</string>
 ```
 
-and AndroidManifest.xml (for Android):
+and strings.xml (for Android):
 
 ```xml
 <string name="ionic_max_versions" >2</string>
