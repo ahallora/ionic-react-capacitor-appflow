@@ -23,7 +23,7 @@ You will be redirected to the browser to verify your credentials.
 
 To link your local app with ionic hub, first create a new app in Ionic Hub and **write down the App Id**.
 
-Then to fire up a fresh Ionic app with Capacitor and React support simply run this terminal command from within your myApp directory, substituting YOUR_APPID with your App Id you wrote down before:
+Then to fire up a fresh Ionic app with Capacitor and React support simply run this terminal command substituting YOUR_APPID with your App Id you wrote down before:
 
 `ionic start myApp tabs --capacitor --type react --id YOUR_APPID`
 
